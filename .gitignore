@@ -1,0 +1,11 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore PyCharm project files
+.idea/
+
+# Ignore Python package requirements
+requirements.txt
+
+# Ignore L02 directory
+L02/
