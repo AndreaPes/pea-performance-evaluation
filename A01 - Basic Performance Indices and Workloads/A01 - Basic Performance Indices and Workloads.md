@@ -6,12 +6,21 @@ second. The road segment is single lane, so no overtake is possible. The value i
 ___
 Using this data, compute:
 
-- Arrival rate and throughput (expressed in [cars/min.])
-- Average inter-arrival time (expressed in [min.])
-- Utilization (expressed in [min.])
-- Average Service Time (expressed in [min.])
-- Average Number of Jobs
-- Average Response Time (expressed in [min.])
-- Draw the distribution of the number of cars in the road segment (from 0 to 25)
-- Draw the response time distribution (between 1 and 40 minutes, with a granularity of 1 min.)
-- Draw the service time distribution (between 0.1 and 5 minutes, with a granularity of 0.1 minutes)
+- [X] Arrival rate and throughput (expressed in [cars/min.]) 
+  - **1.5693 cars/min**
+- [X] Average inter-arrival time (expressed in [min.]) 
+  - **0.6370 min**
+- [X] Utilization 
+  - **92.41%**
+- [X] Average Service Time (expressed in [min.]) 
+  - **0.5889 min**
+- [X] Average Number of Jobs 
+  - **10.6820 jobs**
+- [X] Average Response Time (expressed in [min.]) 
+  - **6.8068 min**
+- [X] Draw the distribution of the number of cars in the road segment (from 0 to 25)
+    - ![Car Distribution](number_f_cars_distribution.png)
+- [X] Draw the response time distribution (between 1 and 40 minutes, with a granularity of 1 min.)
+    - ![Response Time Distribution](response_time_distribution.png)
+- [X] Draw the service time distribution (between 0.1 and 5 minutes, with a granularity of 0.1 minutes)
+    - ![Service Time Distribution](service_time_distribution.png)
