@@ -9,3 +9,6 @@ requirements.txt
 
 # Ignore L02 directory
 L02/
+
+# Ignore L04 directory
+L04/
