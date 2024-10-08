@@ -14,7 +14,7 @@ Consider an increase in the workload, that reduces the inter-arrival time by a f
 
 Which is the maximum arrival rate [expressed in jobs per minute] that can be handled with an average response time of 20 minutes?  
 
-**0.3615 cars/min**
+<span style="color:lightgreen;font-weight:bold">0.3615 cars/min</span>
 
 #### ✔️ Required Service Time Reduction
 Consider now a fraction 𝑎 that produces an arrival rate of 1.2 jobs per minute.
@@ -23,7 +23,7 @@ Which should be the fraction 𝛽 at which we must reduce the service time, i.e.
 𝑠′𝑖 = 𝛽 ∙ 𝑠𝑖  
 so that the average response time is less than 15 minutes?  
 
-**0.3194**
+<span style="color:lightgreen;font-weight:bold">0.3194</span>
 
 ---
 

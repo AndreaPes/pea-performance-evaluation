@@ -8,23 +8,17 @@ The enclosed files [Logger1.csv](Logger1.csv) and [Logger2.csv](Logger2.csv) are
 
 ### Results
 
-#### ✔️ Arrival Rate and Throughput (expressed in [cars/min.])
-**1.5693 cars/min**
+#### ✔️ Arrival Rate and Throughput (expressed in [cars/min.]): <span style="color:lightgreen;font-weight:bold">1.5693 cars/min</span>
 
-#### ✔️ Average Inter-Arrival Time (expressed in [min.])
-**0.6370 min**
+#### ✔️ Average Inter-Arrival Time (expressed in [min.]): <span style="color:lightgreen;font-weight:bold">0.6370 min</span>
 
-#### ✔️ Utilization
-**92.41%**
+#### ✔️ Utilization: <span style="color:lightgreen;font-weight:bold">92.41%</span>
 
-#### ✔️ Average Service Time (expressed in [min.])
-**0.5889 min**
+#### ✔️ Average Service Time (expressed in [min.]): <span style="color:lightgreen;font-weight:bold">0.5889 min</span>
 
-#### ✔️ Average Number of Jobs
-**10.6820 jobs**
+#### ✔️ Average Number of Jobs: <span style="color:lightgreen;font-weight:bold">10.6820 jobs</span>
 
-#### ✔️ Average Response Time (expressed in [min.])
-**6.8068 min**
+#### ✔️ Average Response Time (expressed in [min.]): <span style="color:lightgreen;font-weight:bold">6.8068 min</span>
 
 ---
 
