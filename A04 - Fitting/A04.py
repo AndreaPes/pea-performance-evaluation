@@ -263,24 +263,6 @@ def plot_distribution(empirical, f_dist, title):
     plt.show()
 
 
-# Plot distributions for Trace 1
-plot_distribution(srt_1, F_uniform_1, "Uniform - Trace 1")
-plot_distribution(srt_1, F_exp_1, "Exponential - Trace 1")
-plot_distribution(srt_1, F_erlang_1, "Erlang - Trace 1")
-plot_distribution(srt_1, F_weibull_1, "Weibull - Trace 1")
-plot_distribution(srt_1, F_pareto_1, "Pareto - Trace 1")
-plot_distribution(srt_1, F_hyper_1, "Hyper - Trace 1")
-plot_distribution(srt_1, F_hypo_1, "Hypo - Trace 1")
-
-# Plot distributions for Trace 2
-plot_distribution(srt_2, F_uniform_2, "Uniform")
-plot_distribution(srt_2, F_exp_2, "Exponential")
-plot_distribution(srt_2, F_erlang_2, "Erlang")
-plot_distribution(srt_2, F_weibull_2, "Weibull")
-plot_distribution(srt_2, F_pareto_2, "Pareto")
-plot_distribution(srt_2, F_hyper_2, "Hyper")
-plot_distribution(srt_2, F_hypo_2, "Hypo")
-
 # Combined plot with all distributions for Trace 1
 plt.plot(srt_1, py, '-', label='Empirical CDF')
 plt.plot(t, F_uniform_1, label='Uniform')
@@ -288,7 +270,7 @@ plt.plot(t, F_exp_1, label='Exponential')
 plt.plot(t, F_erlang_1, label='Erlang')
 plt.plot(t, F_weibull_1, label='Weibull')
 plt.plot(t, F_pareto_1, label='Pareto')
-plt.plot(t, F_hyper_1, label='Hyper')
+# plt.plot(t, F_hyper_1, label='Hyper') cv < 1
 plt.plot(t, F_hypo_1, label='Hypo')
 plt.title("All Distributions CDF for Trace 1")
 plt.xlim(0, 50)
@@ -299,11 +281,11 @@ plt.show()
 plt.plot(srt_2, py, '-', label='Empirical CDF')
 plt.plot(t, F_uniform_2, label='Uniform')
 plt.plot(t, F_exp_2, label='Exponential')
-plt.plot(t, F_erlang_2, label='Erlang')
+# plt.plot(t, F_erlang_2, label='Erlang') cv > 1
 plt.plot(t, F_weibull_2, label='Weibull')
 plt.plot(t, F_pareto_2, label='Pareto')
 plt.plot(t, F_hyper_2, label='Hyper')
-plt.plot(t, F_hypo_2, label='Hypo')
+# plt.plot(t, F_hypo_2, label='Hypo') cv > 1
 plt.title("All Distributions CDF for Trace 1")
 plt.xlim(0, 50)
 plt.legend()

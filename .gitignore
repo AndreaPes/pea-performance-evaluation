@@ -8,7 +8,10 @@
 requirements.txt
 
 # Ignore L02 directory
-L02/
+L02 - Basic Performance Indices/
 
 # Ignore L04 directory
-L04/
+L04 - Modelling Workloads/
+
+# Ingore L06 directory
+L06 - Fitting/
