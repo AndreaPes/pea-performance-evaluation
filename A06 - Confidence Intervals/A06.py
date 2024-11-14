@@ -110,22 +110,16 @@ while K <= maxK:
 
     Nl, Nu, RelErrNl = calculate_confidence(N1, N2, K)
 
-    # Check if the relative error criterion is met
     if RelErrU < RELATIVE_ERROR and RelErrX < RELATIVE_ERROR and RelErrR < RELATIVE_ERROR and RelErrNl < RELATIVE_ERROR:
         break
 
-    # Increase the simulation count
     K += delta_K
     Krange = delta_K
 
 print("95% confidence interval of U: ", Ul, Uu)
-print("Relative error of U:          ", RelErrU)
 print("95% confidence interval of X: ", Xl, Xu)
-print("Relative error of X: ", RelErrX)
 print("95% confidence interval of R: ", Rl, Ru)
-print("Relative error of R: ", RelErrR)
 print("95% confidence interval of N: ", Nl, Nu)
-print("Relative error of N: ", RelErrNl)
 print("Solution obtained in ", K, " iterations")
 
 K0 = 10
@@ -181,20 +175,14 @@ while K <= maxK:
 
     Nl, Nu, RelErrNl = calculate_confidence(N1, N2, K)
 
-    # Check if the relative error criterion is met
     if RelErrU < RELATIVE_ERROR and RelErrX < RELATIVE_ERROR and RelErrR < RELATIVE_ERROR and RelErrNl < RELATIVE_ERROR:
         break
 
-    # Increase the simulation count
     K += delta_K
     Krange = delta_K
 
 print("95% confidence interval of U: ", Ul, Uu)
-print("Relative error of U:          ", RelErrU)
 print("95% confidence interval of X: ", Xl, Xu)
-print("Relative error of X: ", RelErrX)
 print("95% confidence interval of R: ", Rl, Ru)
-print("Relative error of R: ", RelErrR)
 print("95% confidence interval of N: ", Nl, Nu)
-print("Relative error of N: ", RelErrNl)
 print("Solution obtained in ", K, " iterations")
