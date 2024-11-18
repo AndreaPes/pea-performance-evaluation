@@ -1,6 +1,7 @@
 import numpy as np
 from scipy import linalg
 
+# Data Initialization
 data = [
     {"Song Length": 240, "Extension Probability": 20, "Skip Next Probability": 5, "Extension Length": 30,
      "Skip Next if Extended": 10, "Royalty Fee": 5},
@@ -24,54 +25,50 @@ data = [
      "Skip Next if Extended": 0, "Royalty Fee": 8}
 ]
 
-num_song = len(data)
-num_states = num_song * 2
+num_states = len(data) * 2
 Q = np.zeros((num_states, num_states))
 
+# Fill the transition rate matrix Q
 for i, song in enumerate(data):
-    normal_state = i * 2
-    extended_state = normal_state + 1
-
-    song_len = song["Song Length"]
+    normal_state, extended_state = i * 2, i * 2 + 1
+    song_len, ext_len = song["Song Length"], song["Extension Length"]
     extension_prob = song["Extension Probability"] / 100
     skip_prob = song["Skip Next Probability"] / 100
-    ext_len = song["Extension Length"]
-    skip_next_prob = song["Skip Next Probability"] / 100
+    skip_next_prob = song["Skip Next if Extended"] / 100
 
-    if extension_prob > 0:
-        Q[normal_state, extended_state] = extension_prob / song_len
-
-    # Transition from Normal to Next Song (no skip state)
+    Q[normal_state, extended_state] = extension_prob / song_len
     Q[normal_state, (normal_state + 2) % num_states] = (1 - extension_prob - skip_prob) / song_len
+    Q[normal_state, (normal_state + 4) % num_states] = skip_prob / song_len
 
-    # Transition from Extended to Next Song
     Q[extended_state, (normal_state + 2) % num_states] = (1 - skip_next_prob) / ext_len
+    Q[extended_state, (normal_state + 4) % num_states] = skip_next_prob / ext_len
 
-    # Transition from Normal to Next Song if skipping
-    if skip_prob > 0:
-        Q[normal_state, (normal_state + 2) % num_states] += skip_prob / song_len
+# Set the diagonal elements
+np.fill_diagonal(Q, -np.sum(Q, axis=1))
 
-    # Transition from Extended to Next Song if skipping after extension
-    if skip_next_prob > 0:
-        Q[extended_state, (normal_state + 2) % num_states] += skip_next_prob / ext_len
+# Solve the linear system to find the stationary distribution
+Q2 = Q.copy()
+Q2[:, 0] = 1
+u = np.zeros(num_states)
+u[0] = 1
+pi = linalg.solve(Q2.T, u)
 
-# Normalize the diagonal
-for row in range(num_states):
-    Q[row, row] = -np.sum(Q[row])
+# Calculate the probabilities for the songs of interest
+songs_of_interest_indices = {"Song 1": 0, "Song 2": 2, "Song 5": 8, "Song 9": 16, "Song 10": 18}
+songs_of_interest = {song: pi[idx] + pi[idx + 1] for song, idx in songs_of_interest_indices.items()}
 
-Q2 = np.vstack((Q.T, np.ones(num_states)))
-u = np.zeros(num_states + 1)
-u[-1] = 1
-
-pi = np.linalg.lstsq(Q2, u, rcond=None)[0]
-
-songs_of_interest = {
-    "Song 1": pi[0] + pi[1],
-    "Song 2": pi[2] + pi[3],
-    "Song 5": pi[8] + pi[9],
-    "Song 9": pi[16] + pi[17],
-    "Song 10": pi[18] + pi[19]
-}
-
+# Display the results
 for song, prob in songs_of_interest.items():
-    print(f"The probability of hearing {song} when entering randomly: {prob:.4f}")
+    print(f"Probability of patron entering while {song} is being played: {prob}")
+
+# Compute the average cost
+average_cost = sum((pi[i * 2] + pi[i * 2 + 1]) * song["Royalty Fee"] for i, song in enumerate(data))
+print(f"The average cost of the songs is: {average_cost} €")
+
+# Compute RTLP
+xi0 = np.zeros((num_states, num_states))
+xi0[18, 0] = xi0[19, 0] = 1
+RTLP = ((Q * xi0) @ np.ones(num_states)) @ pi
+
+print("Number of shows per day: ", RTLP * 60 * 60 * 24)
+print("Average duration of the show: ", 1 / (RTLP * 60))
