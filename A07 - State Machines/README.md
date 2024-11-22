@@ -46,7 +46,9 @@ The following analysis includes:
 
 A state machine diagram represents the interaction sequence and transition probabilities for each stage.
 
-![State Machine Diagram](state_machine_diagram.png)
+![State Machine Diagram](state_machine.jpg)
+
+Diagram created by: [@SimoSaimon](https://github.com/SimoSaimon)
 
 #### 2. State Probabilities
 
