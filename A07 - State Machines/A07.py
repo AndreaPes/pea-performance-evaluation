@@ -109,5 +109,3 @@ print("Probability of Electronic Transaction: ", time_in_states['Electronic'] / 
 print("Probability of Printing: ", time_in_states['Printing'] / t)
 print("Average Duration of a Transaction: ", np.mean(list(RTT)))
 print("Average cash collected in 20 hours: ", balance / (T_MAX / T_CASH))
-print(len(RTT))
-print(print_cont)
