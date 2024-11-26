@@ -28,7 +28,7 @@ r_i = C_T - A_T
 # Average Response Time
 R = np.mean(r_i)
 
-# Avewrage Number of Jobs with Little's Law
+# Average Number of Jobs with Little's Law
 N = X * R
 
 # Service Times
