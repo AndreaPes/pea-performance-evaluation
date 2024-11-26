@@ -1,5 +1,3 @@
-import math
-
 import numpy as np
 
 # Initial Configuration M/M/1
