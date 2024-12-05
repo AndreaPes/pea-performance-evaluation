@@ -8,9 +8,9 @@ D = 1.6
 
 def calculate_probabilities(lam, c):
     rho = lam * D / c
-    p0_inv = sum([(c * rho) ** n / math.factorial(n) for n in range(c)]) + ((c * rho) ** c) / (
+    p0 = sum([(c * rho) ** n / math.factorial(n) for n in range(c)]) + ((c * rho) ** c) / (
             math.factorial(c) * (1 - rho))
-    p0 = 1 / p0_inv
+    p0 = 1 / p0
     return rho, p0
 
 
