@@ -19,27 +19,25 @@ The web server initially receives jobs according to a **Poisson process** with r
 
 #### Results:
 
-- **Utilization**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **Average Response Time**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **Average Number of Jobs in System**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **Utilization**: <span style="color:lightgreen;font-weight:bold">0.8</span>
+- **Average Response Time**: <span style="color:lightgreen;font-weight:bold">140.0 ms</span>
+- **Average Number of Jobs in System**: <span style="color:lightgreen;font-weight:bold">2.800</span>
 
 ---
 
 ### Second Configuration: Increased Traffic and Variability (G/G/c Queue)
 
-After a year, the traffic rate and variability increase, and the service time is now modeled with a **Hyper-Exponential distribution** with **λ₁ = 40 jobs/s**, **λ₂ = 240 jobs/s**, and **p₁ = 80%**. To manage the increased load, new servers are added along with a **load-balancer** that holds requests in a single queue and dispatches them to the first available server.
+After a year, the traffic increases in rate and variability: now it can be considered distributed according to a **Hyper-Exponential distribution** with **λ₁ = 40 jobs/s**, **λ₂ = 240 jobs/s**, and **p₁ = 80%**. To manage the increased load, new servers are added along with a **load-balancer** that holds requests in a single queue and dispatches them to the first available server.
 
 #### Results:
 
-- **Minimum Number of Servers (c)**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **Average Utilization of the System**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **Approximate Average Response Time**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **Approximate Average Number of Jobs in System**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **Minimum Number of Servers (c)**: <span style="color:lightgreen;font-weight:bold">2</span>
+- **Average Utilization of the System**: <span style="color:lightgreen;font-weight:bold">0.96</span>
+- **Approximate Average Response Time**: <span style="color:lightgreen;font-weight:bold">409.110 ms</span>
+- **Approximate Average Number of Jobs in System**: <span style="color:lightgreen;font-weight:bold">19.637</span>
 
 ---
 
 ### Python Script
 
 Python script that calculates all the above values: [**A11.py**](A11.py)
-
----
