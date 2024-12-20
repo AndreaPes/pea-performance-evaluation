@@ -44,7 +44,8 @@ print("Average Number of Jobs: ", N)
 Rk = Dk / (1 - Uk)
 Rk[0] = Dk[0]
 R = np.sum(Rk)
-print("Average Response Time [ms]: ", R * 1000)
+print("Average Response Time [ms]"
+      ": ", R * 1000)
 
 lam_max = 1 / np.max(Dk)
 print("Max Arrival rate: ", lam_max)

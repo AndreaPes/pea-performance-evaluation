@@ -64,7 +64,7 @@ The following analysis includes:
 
 #### 4. Average System Response Time
 
-- **Average Response Time (R)**: <span style="color:lightgreen;font-weight:bold">1.431 s</span>
+- **Average Response Time (R)**: <span style="color:lightgreen;font-weight:bold">1430,525 ms</span>
 
 #### 5. Maximum Arrival Rate
 
