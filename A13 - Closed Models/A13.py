@@ -13,7 +13,7 @@ P = np.array([[0, 1, 0, 0, 0, 0],
               [0, 0, 0, 0, 0.65, 0.35],
               [0, 1, 0, 0, 0, 0],
               [0, 0.9, 0, 0, 0, 0.1],
-              [0, 0.1, 0, 0, 0.9, 0]])
+              [0, 0.9, 0, 0, 0.1, 0]])
 
 # Visits
 v = linalg.solve(np.eye(6) - P.T, np.array([1, 0, 0, 0, 0, 0]))
@@ -33,10 +33,10 @@ Uk = Dk * X
 Xk = X * v
 
 # Output Results
-print("Demand on Disk1:", Dk[4])
-print("Demand on Disk2:", Dk[5])
+print("Demand on Disk1 [ms]:", Dk[4] * 1000)
+print("Demand on Disk2 [ms]:", Dk[5] * 1000)
 print("System Throughput:", X)
-print("Average System Response Time:", Rsys)
+print("Average System Response Time [ms]:", Rsys * 1000)
 print("Utilization of the AppServer:", Uk[1])
 print("Utilization of the DBMS:", Uk[3])
 print("Utilization of Disk1:", Uk[4])
