@@ -43,31 +43,32 @@ The following analysis includes:
 - **DBMS**:
   - **Service Time (S4)**: 70 milliseconds
 
+  ![Graph](a12_graph.png)
 ---
 
 ### Results
 
 #### 1. Visits
 
-- **Application Server**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **Storage**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
-- **DBMS**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **Application Server**: <span style="color:lightgreen;font-weight:bold">2.778</span>
+- **Storage**: <span style="color:lightgreen;font-weight:bold">0.694</span>
+- **DBMS**: <span style="color:lightgreen;font-weight:bold">1.250</span>
 
 #### 2. Throughput
 
-- **System Throughput (X)**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **System Throughput (X)**: <span style="color:lightgreen;font-weight:bold">4.5 jobs/s</span>
 
 #### 3. Average Number of Jobs in the System
 
-- **Average Number of Jobs (N)**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **Average Number of Jobs (N)**: <span style="color:lightgreen;font-weight:bold">6.437</span>
 
 #### 4. Average System Response Time
 
-- **Average Response Time (R)**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **Average Response Time (R)**: <span style="color:lightgreen;font-weight:bold">1430,525 ms</span>
 
 #### 5. Maximum Arrival Rate
 
-- **Maximum Arrival Rate**: <span style="color:lightgreen;font-weight:bold">_TBD_</span>
+- **Maximum Arrival Rate**: <span style="color:lightgreen;font-weight:bold">0.9 jobs/s</span>
 
 ---
 

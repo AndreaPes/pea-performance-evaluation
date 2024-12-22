@@ -46,6 +46,7 @@ The following analysis includes:
   - **10%** of requests are offloaded to **Disk 1**.
   - **90%** of requests complete after being processed by **Disk 2**.
 
+  ![Graph](a13_graph.png)
 --- 
 
 ### Results
