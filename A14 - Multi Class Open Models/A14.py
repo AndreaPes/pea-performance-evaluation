@@ -55,5 +55,5 @@ N2 = XA * R2A + XB * R2B + XC * R2C
 N = N1 + N2
 print("Average Number of Jobs in the System:", N)
 
-R = (XA * RA + XB * RB + XC * RC) / (XA + XB + XC)
+R = (XA * RA + XB * RB + XC * RC) / X
 print("Average System Response Time:", R)
