@@ -15,9 +15,10 @@ The following analysis includes:
 
 ---
 
-### System Characteristics
+### System Diagram
 
-![Graph](a14_graph.png)
+![System Diagram](a14_diagram.png)
+
 ___
 
 ### Results

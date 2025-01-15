@@ -43,7 +43,12 @@ The following analysis includes:
 - **DBMS**:
   - **Service Time (S4)**: 70 milliseconds
 
-  ![Graph](a12_graph.png)
+___
+
+### System Diagram
+
+![System Diagram](a12_diagram.png)
+
 ---
 
 ### Results

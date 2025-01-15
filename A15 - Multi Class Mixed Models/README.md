@@ -19,7 +19,7 @@ The analysis addresses the following performance metrics:
 
 ### System Diagram
 
-![System Diagram](a15_graph.png)
+![System Diagram](a15_diagram.png)
 
 ---
 
